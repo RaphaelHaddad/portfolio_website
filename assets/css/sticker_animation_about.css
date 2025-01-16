@@ -1,0 +1,60 @@
+.animation-container-about {
+  position: absolute;
+  top: 130px;
+  right: -60px;
+  width: 290px;  
+  height: 290px;
+  perspective: 1000px;
+  perspective-origin: center top;
+  transform-style: preserve-3d;
+}
+
+.circle-about {
+  width: 180px;  /* Increased from 120px */
+  height: 180px;
+  transform-style: preserve-3d;
+  position: relative;
+  display: block;
+}
+  
+.circle-about::before,
+.circle-about::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: center/cover url('../images/avatar_about.png');
+}
+  
+.circle-about::before {
+  animation: frontRotate-about 4s both;
+}
+  
+.circle-about::after {
+  filter: brightness(0.2);
+  transform: rotateY(-180deg);
+  animation: backRotate-about 4s both;
+}
+
+@keyframes frontRotate-about {
+  from { clip-path: inset(0 80% 0 0); }
+  50%, to { clip-path: inset(0 0% 0 0); }
+}
+  
+@keyframes backRotate-about {
+  from { 
+    clip-path: inset(0 0 0 20%);
+    transform-origin: 20% 0;
+  }
+  50%, to { 
+    clip-path: inset(0 0 0 100%);
+    transform-origin: 100% 0;
+  }
+}
+  
+@keyframes tiltCircle-about {
+  from { transform: rotate(-50deg) }
+  to { transform: rotate(-40deg) }
+}

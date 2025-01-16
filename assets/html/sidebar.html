@@ -1,0 +1,124 @@
+
+
+
+<aside class="sidebar" data-sidebar>
+
+    <div class="sidebar-info">
+  
+      <figure class="avatar-box">
+        <img src="./assets/images/my_avatar.png" alt="Raphaël El Haddad" width="80" class="avatar">
+      </figure>
+  
+      <div class="info-content">
+        <h1 class="name" title="Raphaël El Haddad">Raphaël El Haddad <br>泰山</h1>
+  
+        <p class="title">CS PhD candidate to be</p>
+      </div>
+  
+      <button class="info_more-btn" data-sidebar-btn>
+        <span>Show Contacts</span>
+  
+        <ion-icon name="chevron-down"></ion-icon>
+      </button>
+  
+    </div>
+  
+    <div class="sidebar-info_more">
+  
+      <div class="separator"></div>
+  
+      <ul class="contacts-list">
+  
+        <li class="contact-item">
+  
+          <div class="icon-box">
+            <ion-icon name="mail-outline"></ion-icon>
+          </div>
+  
+          <div class="contact-info">
+            <p class="contact-title">Email</p>
+  
+            <a class="contact-link">raphael_elhaddad_edu@outlook.com</a>
+          </div>
+  
+        </li>
+  
+        <li class="contact-item">
+  
+          <div class="icon-box">
+            <ion-icon name="globe-outline"></ion-icon>
+          </div>
+  
+          <div class="contact-info">
+            <p class="contact-title">Languages</p>
+  
+              <p class="contact-link">French (Native)</p>
+              <p class="contact-link">English (C1)</p>
+              <p class="contact-link">Chinese (HSK4) </p>
+          </div>
+  
+        </li>
+  
+        <li class="contact-item">
+  
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+    
+            <div class="contact-info">
+              <p class="contact-title">Bio</p>
+    
+                <p class="contact-link">24 y.o : Master Student</p>
+                <p class="contact-link">French / Moroccan</p>
+                <p class="contact-link">European Citizen </p>
+            </div>
+    
+          </li>
+  
+        <li class="contact-item">
+          <script type="module">
+            import { locationName } from './config.js';
+            document.addEventListener('DOMContentLoaded', () => {
+              document.querySelector('.contact-info address').textContent = locationName;
+            });
+          </script>
+  
+          <div class="icon-box">
+            <ion-icon name="location-outline"></ion-icon>
+          </div>
+  
+          <div class="contact-info">
+            <p class="contact-title">Location</p>
+  
+            <address>Tsinghua University, Beijing, China</address>
+          </div>
+  
+        </li>
+  
+      </ul>
+  
+      <div class="separator"></div>
+  
+      <ul class="social-list">
+        <li class="social-item">
+          <a href="https://www.linkedin.com/in/raphaël-el-haddad-8701701b5/" class="social-link" target="_blank" rel="noopener noreferrer">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
+      
+        <li class="social-item">
+          <a href="https://github.com/RaphaelHaddad" class="social-link" target="_blank" rel="noopener noreferrer">
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+        </li>
+      
+        <li class="social-item">
+          <a href="" class="social-link" target="_blank" rel="noopener noreferrer">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </li>
+      </ul>
+  
+    </div>
+  
+  </aside>

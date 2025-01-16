@@ -1,0 +1,65 @@
+.animation-container-resume-experience {
+  position: absolute;
+  top: -50px;     /* Decreased from 100px to move it higher */
+  right: -20px;  /* Changed from 10px to move it more right */
+  width: 150px;
+  height: 100px;
+  perspective: 1000px;
+  perspective-origin: center top;
+  transform-style: preserve-3d;
+}
+
+.circle-resume-experience {
+  width: 135px;
+  height: 135px;
+  transform-style: preserve-3d;
+  position: relative;
+  display: block;
+}
+
+.circle-resume-experience::before,
+.circle-resume-experience::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: center/cover url('../images/image_experience.png');
+}
+
+.circle-resume-experience::before {
+  animation: frontRotate-resume-experience 4s both;
+}
+
+.circle-resume-experience::after {
+  filter: brightness(0.2);
+  transform: rotateY(-180deg);
+  animation: backRotate-resume-experience 4s both;
+}
+
+.circle-resume-experience {
+  animation: tiltCircle-resume-experience 1s both;
+  transform-origin: center bottom;
+}
+
+@keyframes frontRotate-resume-experience {
+  from { clip-path: inset(0 80% 0 0); }
+  50%, to { clip-path: inset(0 0% 0 0); }
+}
+
+@keyframes backRotate-resume-experience {
+  from { 
+      clip-path: inset(0 0 0 20%);
+      transform-origin: 20% 0;
+  }
+  50%, to { 
+      clip-path: inset(0 0 0 100%);
+      transform-origin: 100% 0;
+  }
+}
+
+@keyframes tiltCircle-resume-experience {
+  from { transform: rotate(-50deg) }
+  to { transform: rotate(-40deg) }
+}

@@ -1,0 +1,97 @@
+<article class="portfolio" data-page="portfolio">
+
+    <header>
+      <h2 class="h2 article-title">Portfolio</h2>
+    </header>
+
+    <section class="projects">
+
+      <ul class="filter-list">
+
+        <li class="filter-item">
+          <button class="active" data-filter-btn>All</button>
+        </li>
+
+        <li class="filter-item">
+          <button data-filter-btn>Research projects</button>
+        </li>
+
+        <li class="filter-item">
+          <button data-filter-btn>School projects</button>
+        </li>
+
+        <li class="filter-item">
+          <button data-filter-btn>Personal projects</button>
+        </li>
+
+        <li class="filter-item">
+          <button data-filter-btn>Coding books</button>
+        </li>
+
+      </ul>
+
+      <div class="filter-select-box">
+
+        <button class="filter-select" data-select>
+
+          <div class="select-value" data-selecct-value>Select category</div>
+
+          <div class="select-icon">
+            <ion-icon name="chevron-down"></ion-icon>
+          </div>
+
+        </button>
+
+        <ul class="select-list">
+
+          <li class="select-item">
+            <button data-select-item>All</button>
+          </li>
+
+          <li class="select-item">
+            <button data-select-item>Research projects</button>
+          </li>
+
+          <li class="select-item">
+            <button data-select-item>School projects</button>
+          </li>
+
+          <li class="select-item">
+            <button data-select-item>Personal projects</button>
+          </li>
+
+          <li class="select-item">
+            <button data-filter-btn>Coding books</button>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <ul id="project-list" class="project-list">
+
+        
+
+      </ul>
+
+    </section>
+
+
+    <div class="modal-container" data-project-modal-container>
+      <div class="overlay" data-project-overlay></div>
+      <section class="testimonials-modal">
+        <button class="modal-close-btn" data-project-modal-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+        <!-- Single div for blurred background -->
+        <div class="modal-blurred-bg" data-project-modal-bg></div>
+        <!-- Large White Title -->
+        <h2 class="modal-title" data-project-modal-title></h2>
+
+        <div class="modal-content">
+          <div data-project-modal-text></div>
+        </div>
+      </section>
+    </div>
+
+  </article>

@@ -1,0 +1,61 @@
+.animation-container-about-doing {
+  position: absolute;
+  top: -56px; /* Negative value lifts it out of the section */
+  right: 20px;
+  width: 120px;
+  height: 120px;
+  opacity: 0.6;
+  perspective: 1000px;
+  perspective-origin: center top;
+  transform-style: preserve-3d;
+}
+
+.circle-about-doing {
+  width: 100px;  /* Smaller circle */
+  height: 100px;
+  transform-style: preserve-3d;
+  position: relative;
+  display: block;
+}
+  
+.circle-about-doing::before,
+.circle-about-doing::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: center/cover url('../images/image_swipe.png');
+}
+  
+.circle-about-doing::before {
+  animation: frontRotate-about-doing 4s both;
+}
+  
+.circle-about-doing::after {
+  filter: brightness(0.2);
+  transform: rotateY(-180deg);
+  animation: backRotate-about-doing 4s both;
+}
+
+@keyframes frontRotate-about-doing {
+  from { clip-path: inset(0 80% 0 0); }
+  50%, to { clip-path: inset(0 0% 0 0); }
+}
+  
+@keyframes backRotate-about-doing {
+  from { 
+    clip-path: inset(0 0 0 20%);
+    transform-origin: 20% 0;
+  }
+  50%, to { 
+    clip-path: inset(0 0 0 100%);
+    transform-origin: 100% 0;
+  }
+}
+  
+@keyframes tiltCircle-about-doing {
+  from { transform: rotate(-50deg) }
+  to { transform: rotate(-40deg) }
+}

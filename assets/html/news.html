@@ -1,0 +1,47 @@
+<article class="news" data-page="news">
+    <header>
+      <h2 class="h2 article-title">News</h2>
+    </header>
+
+    <section class="news-filters">
+        <ul class="filter-list" id="newsYearFilter">
+          <li class="filter-item">
+            <button class="active" data-filter-btn>All Years</button>
+          </li>
+        </ul>
+  
+        <div class="filter-select-box">
+          <button class="filter-select" data-select>
+            <div class="select-value" data-select-value>Select Year</div>
+            <div class="select-icon">
+              <ion-icon name="chevron-down"></ion-icon>
+            </div>
+          </button>
+          <ul class="select-list">
+            <li class="select-item">
+              <button data-select-item>All Years</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+  
+    <section class="news-posts">
+      <ul class="news-posts-list" id="newsList">
+        <!-- News items will be dynamically loaded here -->
+      </ul>
+    </section>
+  
+    <div class="modal-container" data-news-modal-container>
+      <div class="overlay" data-news-overlay></div>
+      <section class="testimonials-modal">
+        <button class="modal-close-btn" data-news-modal-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+        <div class="modal-blurred-bg" data-news-modal-bg></div>
+        <h2 class="modal-title" data-news-modal-title></h2>
+        <div class="modal-content">
+          <div data-news-modal-text></div>
+        </div>
+      </section>
+    </div>
+  </article>

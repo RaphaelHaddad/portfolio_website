@@ -1,0 +1,123 @@
+.animation-container-about-inspire-1 {
+  position: absolute;
+  top: -56px;
+  right: 140px;
+  width: 120px;
+  height: 120px;
+  opacity: 0.6;
+  perspective: 1000px;
+  perspective-origin: center top;
+  transform-style: preserve-3d;
+}
+
+.circle-about-inspire-1 {
+  width: 120px;
+  height: 100px;
+  transform-style: preserve-3d;
+  position: relative;
+  display: block;
+}
+
+.circle-about-inspire-1::before,
+.circle-about-inspire-1::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: center/cover url('../images/image_click.png');
+}
+
+.circle-about-inspire-1::before {
+  animation: frontRotate-about-inspire-1 4s both;
+}
+
+.circle-about-inspire-1::after {
+  filter: brightness(0.2);
+  transform: rotateY(-180deg);
+  animation: backRotate-about-inspire-1 4s both;
+}
+
+.animation-container-about-inspire-2 {
+  position: absolute;
+  top: -56px;
+  right: 20px;
+  width: 120px;
+  height: 120px;
+  opacity: 0.6;
+  perspective: 1000px;
+  perspective-origin: center top;
+  transform-style: preserve-3d;
+}
+
+.circle-about-inspire-2 {
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  position: relative;
+  display: block;
+}
+
+.circle-about-inspire-2::before,
+.circle-about-inspire-2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: center/cover url('../images/image_swipe.png');
+}
+
+.circle-about-inspire-2::before {
+  animation: frontRotate-about-inspire-2 4s both;
+}
+
+.circle-about-inspire-2::after {
+  filter: brightness(0.2);
+  transform: rotateY(-180deg);
+  animation: backRotate-about-inspire-2 4s both;
+}
+
+@keyframes frontRotate-about-inspire-1 {
+  from { clip-path: inset(0 80% 0 0); }
+  50%, to { clip-path: inset(0 0% 0 0); }
+}
+
+@keyframes frontRotate-about-inspire-2 {
+  from { clip-path: inset(0 80% 0 0); }
+  50%, to { clip-path: inset(0 0% 0 0); }
+}
+
+@keyframes backRotate-about-inspire-1 {
+  from { 
+    clip-path: inset(0 0 0 20%);
+    transform-origin: 20% 0;
+  }
+  50%, to { 
+    clip-path: inset(0 0 0 100%);
+    transform-origin: 100% 0;
+  }
+}
+
+@keyframes backRotate-about-inspire-2 {
+  from { 
+    clip-path: inset(0 0 0 20%);
+    transform-origin: 20% 0;
+  }
+  50%, to { 
+    clip-path: inset(0 0 0 100%);
+    transform-origin: 100% 0;
+  }
+}
+
+@keyframes tiltCircle-about-inspire-1 {
+  from { transform: rotate(-50deg) }
+  to { transform: rotate(-40deg) }
+}
+
+@keyframes tiltCircle-about-inspire-2 {
+  from { transform: rotate(-50deg) }
+  to { transform: rotate(-40deg) }
+}
